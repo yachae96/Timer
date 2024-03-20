@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
        let seconds = Int(slider.value * 60) // 0.0 ~ 1.0 을 0부터 60을 변환
 //        print(seconds)
-        mainLabel.text = "\(seconds)"
+        mainLabel.text = "\(seconds)초"
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
