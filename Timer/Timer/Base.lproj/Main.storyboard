@@ -33,7 +33,7 @@
                                             <constraint firstAttribute="height" constant="1" id="b7R-UA-3t5"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초를 선택하시오" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvP-AI-bwf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvP-AI-bwf">
                                         <rect key="frame" x="0.0" y="65" width="373" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="mrc-N6-wVO"/>
@@ -56,6 +56,9 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ene-Yn-Kn8">
                                                 <rect key="frame" x="53" y="0.0" width="267" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderUI:" destination="BYZ-38-t0r" eventType="valueChanged" id="jdA-dJ-B2U"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60초" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-ca-x0M">
                                                 <rect key="frame" x="328" y="0.0" width="45" height="30"/>
@@ -88,6 +91,9 @@
                                         <state key="normal" title="RESET">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qKv-8w-kqT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVL-Dm-OHz">
                                         <rect key="frame" x="194" y="0.0" width="179" height="50"/>
@@ -97,6 +103,9 @@
                                         <state key="normal" title="START">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zej-7r-FoP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -115,10 +124,14 @@
                             <constraint firstItem="tsO-Ld-HIl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="xgB-Ql-7ct"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="GvP-AI-bwf" id="gtn-w7-Etq"/>
+                        <outlet property="slider" destination="ene-Yn-Kn8" id="6Ik-Py-Gqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-339.69465648854958" y="-57.04225352112676"/>
+            <point key="canvasLocation" x="-266" y="-58"/>
         </scene>
     </scenes>
     <resources>
